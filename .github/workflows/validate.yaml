@@ -1,0 +1,14 @@
+name: Pull Request validation
+
+on: [pull_request]
+
+
+jobs:
+  myth-licenses-contracts-ci:
+    name: Run myth-licenses-contracts validation
+    uses: ./.github/workflows/myth-licenses-contracts-ci.yaml
+
+  myth-licenses-frontend-ci:
+    name: Run myth-licenses-frontend validation
+    uses: ./.github/workflows/myth-licenses-frontend-ci.yaml
+

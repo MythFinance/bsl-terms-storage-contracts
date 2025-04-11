@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '.vscode/**'
+      - '.idea/**'
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  myth-licenses-contracts-validate:
+    name: Run myth-licenses-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/myth-licenses-contracts-ci.yaml
+
+  myth-licenses-contracts-release:
+    name: Run myth-licenses-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/myth-licenses-contracts-cd.yaml
+    needs: myth-licenses-contracts-validate
+
+  myth-licenses-frontend-validate:
+    name: Run myth-licenses-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/myth-licenses-frontend-ci.yaml
+
+  myth-licenses-frontend-release:
+    name: Run myth-licenses-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/myth-licenses-frontend-cd.yaml
+    needs: myth-licenses-frontend-validate
