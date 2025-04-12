@@ -1,8 +1,15 @@
+import * as algokit from '@algorandfoundation/algokit-utils'
 import { AlgorandClient } from '@algorandfoundation/algokit-utils'
 import { LicensesFactory } from '../artifacts/licenses/LicensesClient'
 
 // Below is a showcase of various deployment options you can use in TypeScript Client
 export async function deploy() {
+  algokit.Config.configure({
+    debug: true,
+    populateAppCallResources: true,
+    // traceAll: true,
+  })
+
   console.log('=== Deploying Licenses ===')
 
   const algorand = AlgorandClient.fromEnvironment()
@@ -12,7 +19,11 @@ export async function deploy() {
     defaultSender: deployer.addr,
   })
 
-  const { appClient, result } = await factory.deploy({ onUpdate: 'append', onSchemaBreak: 'append' })
+  const { appClient, result } = await factory.deploy({
+    // existingDeployments: { creator: deployer.addr, apps: {} }, // TO force redeploy
+    onUpdate: 'append',
+    onSchemaBreak: 'append',
+  })
 
   // If app was just created fund the app account
   if (['create', 'replace'].includes(result.operationPerformed)) {
@@ -23,11 +34,44 @@ export async function deploy() {
     })
   }
 
-  const method = 'hello'  
-  const response = await appClient.send.hello({
-    args: { name: 'world' },
+  await appClient.send.addProduct({
+    args: {
+      name: 'dualSTAKE Core',
+      changeDate: 1830297600,
+    },
   })
-  console.log(
-    `Called ${method} on ${appClient.appClient.appName} (${appClient.appClient.appId}) with name = world, received: ${response.return}`,
-  )
+
+  const boxes = ['No additional uses are granted at this time.']
+
+  await appClient.send.modifyUseGrants({
+    args: {
+      name: 'dualSTAKE Core',
+      offset: 0,
+      payload: boxes[0],
+      finalChunk: true,
+    },
+  })
+
+  await appClient.send.addProduct({
+    args: {
+      name: 'dualSTAKE Farm',
+      changeDate: 1830297600,
+    },
+  })
+
+  await appClient.send.modifyUseGrants({
+    args: {
+      name: 'dualSTAKE Farm',
+      offset: 0,
+      payload: boxes[0],
+      finalChunk: true,
+    },
+  })
+
+  // await appClient.send.modifyGlobal({
+  //   args: {
+  //     key: Buffer.from(' README 4'),
+  //     value: Buffer.from('Frontend viewer: https://bsl.myth.finance/'),
+  //   },
+  // })
 }

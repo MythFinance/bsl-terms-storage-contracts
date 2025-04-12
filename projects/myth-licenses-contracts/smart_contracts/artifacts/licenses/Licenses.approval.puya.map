@@ -1,0 +1,1665 @@
+{
+  "version": 3,
+  "sources": [
+    "../../licenses/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA6BQ;AAAa;;AAAb;AAEI;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AADJ;AAKI;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AADJ;AAKI;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AADJ;AAdR;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;AAAA;;AA0DK;;AAAA;AAAA;AAAA;;AAAA;AA1DL;;;AAAA;;;AAAA;;;AAAA;;;AA0DK;;;AAAA;;AAXA;;AAAA;AAAA;AAAA;;AAAA;AA/CL;;;AAAA;;;AAAA;;;AAAA;AA+CK;;;AAAA;;AAnBA;;AAAA;AAAA;AAAA;;AAAA;AA5BL;;;AAAA;;;AAAA;;;AAAA;AAAA;;;AAAA;;;AAAA;;;;AAAA;AA4BK;;;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AApBL;;;AAAA;;;AAAA;;;AAAA;AAoBK;;;AAAA;;AApBL;;AAAA;;;;;;;;;AAoBA;;;AAEQ;;;AAuDO;;AAAO;AAAP;AAAA;AArDA;AAAA;;AA7BR;;;AA6BsC;;;;;;;;;;;AA5BrC;AACA;AAoFQ;;AAAO;AAAP;AARR;;AAAA;AA/CA;;AAAA;AAAA;;AAA8C;AAA9C;;AAER;;;;AAiDe;;AAAO;AAAP;AAAA;AA3CA;AAAA;;AAvCR;;;AAuCkC;;;;;;;;;;;;AAtCjC;AACA;AAuCY;;AAAA;AAAT;;AAAA;AAAA;AAAA;;AAAgC;;AAAA;AAAA;AAAhC;AAAX;;;AACY;;AAAA;;AAAA;AAEJ;;AAAA;;AAAqC;AAArC;;AAAA;AAGI;;AAAA;;;AACI;;AAAA;AAAA;AAAA;;AAAA;AADJ;;;AAGA;;AAAA;;AAAA;;AAEZ;;;AAEQ;;;AAgCQ;;AAAO;AAAP;AAAA;AAZD;AAhBH;AAAA;AAAJ;AACO;;AAAA;AA3DR;;;AA2D6C;;;;;;;;;;;AA1D5C;AACA;AA4EA;;AAAA;;AAAA;;AAfR;;;AAEQ;;;AACA;;AAAA;;AAAA;;AAIO;;AAAc;AAAA;AAAA;AAAA;AAAd;AAtER;;;AAsEkC;;;;;;;;;;;;AArEjC;AACA;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.licenses.contract.Licenses.__algopy_entrypoint_with_init",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 1 0"
+    },
+    "5": {
+      "op": "bytecblock \"admin\" \" use grants\" \" change date\" \"\""
+    },
+    "39": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "41": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "44": {
+      "op": "bytec_0 // \"admin\"",
+      "defined_out": [
+        "\"admin\""
+      ],
+      "stack_out": [
+        "\"admin\""
+      ]
+    },
+    "45": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"admin\"",
+        "new_state_value%0#0"
+      ],
+      "stack_out": [
+        "\"admin\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "47": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "48": {
+      "op": "pushbytess 0x20524541444d452031 0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f72204d7974682046696e616e63652042534c206c6963656e7365642070726f64756374732e // 0x20524541444d452031, 0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f72204d7974682046696e616e63652042534c206c6963656e7365642070726f64756374732e",
+      "defined_out": [
+        "0x20524541444d452031",
+        "0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f72204d7974682046696e616e63652042534c206c6963656e7365642070726f64756374732e"
+      ],
+      "stack_out": [
+        "0x20524541444d452031",
+        "0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f72204d7974682046696e616e63652042534c206c6963656e7365642070726f64756374732e"
+      ]
+    },
+    "156": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "157": {
+      "op": "pushbytess 0x20524541444d452032 0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e747320696e20626f782073746f726167652e // 0x20524541444d452032, 0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e747320696e20626f782073746f726167652e",
+      "defined_out": [
+        "0x20524541444d452032",
+        "0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e747320696e20626f782073746f726167652e"
+      ],
+      "stack_out": [
+        "0x20524541444d452032",
+        "0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e747320696e20626f782073746f726167652e"
+      ]
+    },
+    "245": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "246": {
+      "op": "pushbytess 0x20524541444d452033 0x4368616e676520646174657320696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312e2046726f6e74656e64207669657765723a2068747470733a2f2f62736c2e6d7974682e66696e616e63652f // 0x20524541444d452033, 0x4368616e676520646174657320696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312e2046726f6e74656e64207669657765723a2068747470733a2f2f62736c2e6d7974682e66696e616e63652f",
+      "defined_out": [
+        "0x20524541444d452033",
+        "0x4368616e676520646174657320696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312e2046726f6e74656e64207669657765723a2068747470733a2f2f62736c2e6d7974682e66696e616e63652f"
+      ],
+      "stack_out": [
+        "0x20524541444d452033",
+        "0x4368616e676520646174657320696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312e2046726f6e74656e64207669657765723a2068747470733a2f2f62736c2e6d7974682e66696e616e63652f"
+      ]
+    },
+    "361": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "362": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "364": {
+      "op": "bz main_bare_routing@9",
+      "stack_out": []
+    },
+    "367": {
+      "op": "pushbytess 0x88bc9a7b 0x162e3e79 0x51dada2d 0x41151da8 // method \"add_product(string,uint64)void\", method \"modify_use_grants(string,uint64,string,bool)void\", method \"modify_change_date(string,uint64)void\", method \"modify_global(byte[],byte[])void\"",
+      "defined_out": [
+        "Method(add_product(string,uint64)void)",
+        "Method(modify_change_date(string,uint64)void)",
+        "Method(modify_global(byte[],byte[])void)",
+        "Method(modify_use_grants(string,uint64,string,bool)void)"
+      ],
+      "stack_out": [
+        "Method(add_product(string,uint64)void)",
+        "Method(modify_use_grants(string,uint64,string,bool)void)",
+        "Method(modify_change_date(string,uint64)void)",
+        "Method(modify_global(byte[],byte[])void)"
+      ]
+    },
+    "389": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(add_product(string,uint64)void)",
+        "Method(modify_change_date(string,uint64)void)",
+        "Method(modify_global(byte[],byte[])void)",
+        "Method(modify_use_grants(string,uint64,string,bool)void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(add_product(string,uint64)void)",
+        "Method(modify_use_grants(string,uint64,string,bool)void)",
+        "Method(modify_change_date(string,uint64)void)",
+        "Method(modify_global(byte[],byte[])void)",
+        "tmp%2#0"
+      ]
+    },
+    "392": {
+      "op": "match main_add_product_route@5 main_modify_use_grants_route@6 main_modify_change_date_route@7 main_modify_global_route@8",
+      "stack_out": []
+    },
+    "402": {
+      "block": "main_after_if_else@11",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "403": {
+      "op": "return",
+      "stack_out": []
+    },
+    "404": {
+      "block": "main_modify_global_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "406": {
+      "op": "!",
+      "defined_out": [
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%28#0"
+      ]
+    },
+    "407": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "408": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "410": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "411": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "414": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "417": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0"
+      ]
+    },
+    "420": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%34#0"
+      ]
+    },
+    "423": {
+      "callsub": "smart_contracts.licenses.contract.Licenses.modify_global",
+      "op": "callsub modify_global",
+      "stack_out": []
+    },
+    "426": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "427": {
+      "op": "return",
+      "stack_out": []
+    },
+    "428": {
+      "block": "main_modify_change_date_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "430": {
+      "op": "!",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "431": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "432": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "434": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "435": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "438": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "441": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%2#0",
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0",
+        "reinterpret_bytes[8]%2#0"
+      ]
+    },
+    "444": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%25#0",
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%25#0",
+        "tmp%26#0"
+      ]
+    },
+    "445": {
+      "callsub": "smart_contracts.licenses.contract.Licenses.modify_change_date",
+      "op": "callsub modify_change_date",
+      "stack_out": []
+    },
+    "448": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "449": {
+      "op": "return",
+      "stack_out": []
+    },
+    "450": {
+      "block": "main_modify_use_grants_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "452": {
+      "op": "!",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "453": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "454": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "456": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "457": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "460": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "463": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%1#0",
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "reinterpret_bytes[8]%1#0"
+      ]
+    },
+    "466": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0"
+      ]
+    },
+    "467": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%17#0"
+      ]
+    },
+    "470": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0"
+      ]
+    },
+    "473": {
+      "op": "txna ApplicationArgs 4",
+      "defined_out": [
+        "reinterpret_bytes[1]%0#0",
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0",
+        "reinterpret_bytes[1]%0#0"
+      ]
+    },
+    "476": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "reinterpret_bytes[1]%0#0",
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0",
+        "reinterpret_bytes[1]%0#0",
+        "0"
+      ]
+    },
+    "477": {
+      "op": "getbit",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0",
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%18#0",
+        "tmp%19#0"
+      ]
+    },
+    "478": {
+      "callsub": "smart_contracts.licenses.contract.Licenses.modify_use_grants",
+      "op": "callsub modify_use_grants",
+      "stack_out": []
+    },
+    "481": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "482": {
+      "op": "return",
+      "stack_out": []
+    },
+    "483": {
+      "block": "main_add_product_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "485": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "486": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "487": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "489": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "490": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "493": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "496": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "499": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "500": {
+      "callsub": "smart_contracts.licenses.contract.Licenses.add_product",
+      "op": "callsub add_product",
+      "stack_out": []
+    },
+    "503": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "504": {
+      "op": "return",
+      "stack_out": []
+    },
+    "505": {
+      "block": "main_bare_routing@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "507": {
+      "op": "bnz main_after_if_else@11",
+      "stack_out": []
+    },
+    "510": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%36#0"
+      ]
+    },
+    "512": {
+      "op": "!",
+      "defined_out": [
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%37#0"
+      ]
+    },
+    "513": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "514": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "515": {
+      "op": "return",
+      "stack_out": []
+    },
+    "516": {
+      "subroutine": "smart_contracts.licenses.contract.Licenses.add_product",
+      "params": {
+        "name#0": "bytes",
+        "change_date#0": "uint64"
+      },
+      "block": "add_product",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "519": {
+      "callsub": "smart_contracts.licenses.contract.Licenses.admin_only",
+      "op": "callsub admin_only"
+    },
+    "522": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "name#0 (copy)"
+      ]
+    },
+    "524": {
+      "op": "bytec_1 // \" use grants\"",
+      "defined_out": [
+        "\" use grants\"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "name#0 (copy)",
+        "\" use grants\""
+      ]
+    },
+    "525": {
+      "op": "concat",
+      "defined_out": [
+        "box_key#0"
+      ],
+      "stack_out": [
+        "box_key#0"
+      ]
+    },
+    "526": {
+      "op": "dup",
+      "defined_out": [
+        "box_key#0"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "527": {
+      "op": "box_len",
+      "defined_out": [
+        "box_key#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "528": {
+      "op": "bury 1",
+      "stack_out": [
+        "box_key#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "530": {
+      "op": "bz add_product_after_if_else@5",
+      "stack_out": [
+        "box_key#0"
+      ]
+    },
+    "533": {
+      "op": "pushbytes \"ERR:EXIST\"",
+      "defined_out": [
+        "\"ERR:EXIST\"",
+        "box_key#0"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "\"ERR:EXIST\""
+      ]
+    },
+    "544": {
+      "op": "log",
+      "stack_out": [
+        "box_key#0"
+      ]
+    },
+    "545": {
+      "op": "err"
+    },
+    "546": {
+      "block": "add_product_after_if_else@5",
+      "stack_in": [
+        "box_key#0"
+      ],
+      "op": "frame_dig -2",
+      "defined_out": [
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "name#0 (copy)"
+      ]
+    },
+    "548": {
+      "op": "bytec_2 // \" change date\"",
+      "defined_out": [
+        "\" change date\"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "name#0 (copy)",
+        "\" change date\""
+      ]
+    },
+    "549": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "tmp%0#2"
+      ]
+    },
+    "550": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "change_date#0 (copy)",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "tmp%0#2",
+        "change_date#0 (copy)"
+      ]
+    },
+    "552": {
+      "op": "app_global_put",
+      "stack_out": [
+        "box_key#0"
+      ]
+    },
+    "553": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "box_key#0"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "555": {
+      "op": "dup",
+      "defined_out": [
+        "box_key#0",
+        "box_key#0 (copy)"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "box_key#0",
+        "box_key#0 (copy)"
+      ]
+    },
+    "556": {
+      "op": "box_del",
+      "defined_out": [
+        "box_key#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "box_key#0",
+        "{box_del}"
+      ]
+    },
+    "557": {
+      "op": "pop",
+      "stack_out": [
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "558": {
+      "op": "bytec_3 // \"\"",
+      "defined_out": [
+        "\"\"",
+        "box_key#0"
+      ],
+      "stack_out": [
+        "box_key#0",
+        "box_key#0",
+        "\"\""
+      ]
+    },
+    "559": {
+      "op": "box_put",
+      "stack_out": [
+        "box_key#0"
+      ]
+    },
+    "560": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "561": {
+      "subroutine": "smart_contracts.licenses.contract.Licenses.modify_use_grants",
+      "params": {
+        "name#0": "bytes",
+        "offset#0": "uint64",
+        "payload#0": "bytes",
+        "final_chunk#0": "uint64"
+      },
+      "block": "modify_use_grants",
+      "stack_in": [],
+      "op": "proto 4 0"
+    },
+    "564": {
+      "op": "bytec_3 // \"\"",
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "565": {
+      "op": "frame_dig -4",
+      "defined_out": [
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "name#0 (copy)"
+      ]
+    },
+    "567": {
+      "op": "bytec_1 // \" use grants\"",
+      "defined_out": [
+        "\" use grants\"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "name#0 (copy)",
+        "\" use grants\""
+      ]
+    },
+    "568": {
+      "op": "concat",
+      "defined_out": [
+        "box_key#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "569": {
+      "op": "dup",
+      "defined_out": [
+        "box_key#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "570": {
+      "op": "box_len",
+      "defined_out": [
+        "box_key#0",
+        "cond#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "maybe_value%0#0",
+        "cond#0"
+      ]
+    },
+    "571": {
+      "op": "bury 1",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "cond#0"
+      ]
+    },
+    "573": {
+      "op": "bnz modify_use_grants_after_if_else@10",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "576": {
+      "op": "pushbytes \"ERR:NEXIST\"",
+      "defined_out": [
+        "\"ERR:NEXIST\"",
+        "box_key#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "\"ERR:NEXIST\""
+      ]
+    },
+    "588": {
+      "op": "log",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "589": {
+      "op": "err"
+    },
+    "590": {
+      "block": "modify_use_grants_after_if_else@10",
+      "stack_in": [
+        "tmp%2#0",
+        "box_key#0"
+      ],
+      "op": "frame_dig -2",
+      "defined_out": [
+        "payload#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "payload#0 (copy)"
+      ]
+    },
+    "592": {
+      "op": "len",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%1#0"
+      ]
+    },
+    "593": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "offset#0 (copy)",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%1#0",
+        "offset#0 (copy)"
+      ]
+    },
+    "595": {
+      "op": "+",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%2#0"
+      ]
+    },
+    "596": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%2#0",
+        "tmp%2#0"
+      ]
+    },
+    "597": {
+      "op": "frame_bury 0",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%2#0"
+      ]
+    },
+    "599": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "box_key#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "601": {
+      "op": "box_len",
+      "defined_out": [
+        "box_key#0",
+        "check%0#0",
+        "tmp%2#0",
+        "value%0#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%2#0",
+        "value%0#0",
+        "check%0#0"
+      ]
+    },
+    "602": {
+      "error": "check self.licenses entry exists",
+      "op": "assert // check self.licenses entry exists",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%2#0",
+        "value%0#0"
+      ]
+    },
+    "603": {
+      "op": ">",
+      "defined_out": [
+        "box_key#0",
+        "tmp%2#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%4#0"
+      ]
+    },
+    "604": {
+      "op": "bz modify_use_grants_after_if_else@2",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "607": {
+      "op": "frame_dig 1",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "609": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0",
+        "tmp%2#0"
+      ]
+    },
+    "611": {
+      "op": "box_resize",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "612": {
+      "block": "modify_use_grants_after_if_else@2",
+      "stack_in": [
+        "tmp%2#0",
+        "box_key#0"
+      ],
+      "op": "frame_dig 1",
+      "defined_out": [
+        "box_key#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "614": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "box_key#0",
+        "offset#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0",
+        "offset#0 (copy)"
+      ]
+    },
+    "616": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "box_key#0",
+        "offset#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0",
+        "offset#0 (copy)",
+        "0"
+      ]
+    },
+    "617": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "0",
+        "box_key#0",
+        "offset#0 (copy)",
+        "payload#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0",
+        "offset#0 (copy)",
+        "0",
+        "payload#0 (copy)"
+      ]
+    },
+    "619": {
+      "op": "box_splice",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "620": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "box_key#0",
+        "final_chunk#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "final_chunk#0 (copy)"
+      ]
+    },
+    "622": {
+      "op": "bz modify_use_grants_after_if_else@5",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "625": {
+      "op": "frame_dig 1",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "627": {
+      "op": "box_len",
+      "defined_out": [
+        "box_key#0",
+        "check%1#0",
+        "value%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "value%1#0",
+        "check%1#0"
+      ]
+    },
+    "628": {
+      "error": "check self.licenses entry exists",
+      "op": "assert // check self.licenses entry exists",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "value%1#0"
+      ]
+    },
+    "629": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "box_key#0",
+        "tmp%2#0",
+        "value%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "value%1#0",
+        "tmp%2#0"
+      ]
+    },
+    "631": {
+      "op": ">",
+      "defined_out": [
+        "box_key#0",
+        "tmp%10#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "tmp%10#0"
+      ]
+    },
+    "632": {
+      "op": "bz modify_use_grants_after_if_else@5",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "635": {
+      "op": "frame_dig 1",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0"
+      ]
+    },
+    "637": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0",
+        "box_key#0",
+        "tmp%2#0"
+      ]
+    },
+    "639": {
+      "op": "box_resize",
+      "stack_out": [
+        "tmp%2#0",
+        "box_key#0"
+      ]
+    },
+    "640": {
+      "block": "modify_use_grants_after_if_else@5",
+      "stack_in": [
+        "tmp%2#0",
+        "box_key#0"
+      ],
+      "retsub": true,
+      "op": "retsub"
+    },
+    "641": {
+      "subroutine": "smart_contracts.licenses.contract.Licenses.modify_change_date",
+      "params": {
+        "name#0": "bytes",
+        "next_change_date#0": "uint64"
+      },
+      "block": "modify_change_date",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "644": {
+      "callsub": "smart_contracts.licenses.contract.Licenses.admin_only",
+      "op": "callsub admin_only"
+    },
+    "647": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "name#0 (copy)"
+      ]
+    },
+    "649": {
+      "op": "bytec_2 // \" change date\"",
+      "defined_out": [
+        "\" change date\"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "name#0 (copy)",
+        "\" change date\""
+      ]
+    },
+    "650": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "651": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "tmp%0#2"
+      ]
+    },
+    "652": {
+      "op": "app_global_get",
+      "defined_out": [
+        "prev_change_date#0",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "prev_change_date#0"
+      ]
+    },
+    "653": {
+      "op": "dup",
+      "defined_out": [
+        "prev_change_date#0",
+        "prev_change_date#0 (copy)",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "prev_change_date#0",
+        "prev_change_date#0 (copy)"
+      ]
+    },
+    "654": {
+      "op": "itob",
+      "defined_out": [
+        "prev_change_date#0",
+        "tmp%0#0",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "prev_change_date#0",
+        "tmp%0#0"
+      ]
+    },
+    "655": {
+      "op": "log",
+      "stack_out": [
+        "tmp%0#2",
+        "prev_change_date#0"
+      ]
+    },
+    "656": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "next_change_date#0 (copy)",
+        "prev_change_date#0",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "prev_change_date#0",
+        "next_change_date#0 (copy)"
+      ]
+    },
+    "658": {
+      "op": ">",
+      "defined_out": [
+        "cond#0",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "cond#0"
+      ]
+    },
+    "659": {
+      "op": "bnz modify_change_date_after_if_else@5",
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "662": {
+      "op": "pushbytes \"ERR:LATER\"",
+      "defined_out": [
+        "\"ERR:LATER\"",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "\"ERR:LATER\""
+      ]
+    },
+    "673": {
+      "op": "log",
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "674": {
+      "op": "err"
+    },
+    "675": {
+      "block": "modify_change_date_after_if_else@5",
+      "stack_in": [
+        "tmp%0#2"
+      ],
+      "op": "frame_dig 0",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "tmp%0#2"
+      ]
+    },
+    "677": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "next_change_date#0 (copy)",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2",
+        "tmp%0#2",
+        "next_change_date#0 (copy)"
+      ]
+    },
+    "679": {
+      "op": "app_global_put",
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "680": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "681": {
+      "subroutine": "smart_contracts.licenses.contract.Licenses.modify_global",
+      "params": {
+        "key#0": "bytes",
+        "value#0": "bytes"
+      },
+      "block": "modify_global",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "684": {
+      "callsub": "smart_contracts.licenses.contract.Licenses.admin_only",
+      "op": "callsub admin_only"
+    },
+    "687": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "key#0 (copy)"
+      ],
+      "stack_out": [
+        "key#0 (copy)"
+      ]
+    },
+    "689": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "key#0 (copy)",
+        "value#0 (copy)"
+      ],
+      "stack_out": [
+        "key#0 (copy)",
+        "value#0 (copy)"
+      ]
+    },
+    "691": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "692": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "693": {
+      "subroutine": "smart_contracts.licenses.contract.Licenses.admin_only",
+      "params": {},
+      "block": "admin_only",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "695": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "696": {
+      "op": "bytec_0 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "697": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "698": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "699": {
+      "op": "==",
+      "defined_out": [
+        "cond#0"
+      ],
+      "stack_out": [
+        "cond#0"
+      ]
+    },
+    "700": {
+      "op": "bnz admin_only_after_if_else@3",
+      "stack_out": []
+    },
+    "703": {
+      "op": "pushbytes \"ERR:UNAUTH\"",
+      "defined_out": [
+        "\"ERR:UNAUTH\""
+      ],
+      "stack_out": [
+        "\"ERR:UNAUTH\""
+      ]
+    },
+    "715": {
+      "op": "log",
+      "stack_out": []
+    },
+    "716": {
+      "op": "err"
+    },
+    "717": {
+      "block": "admin_only_after_if_else@3",
+      "stack_in": [],
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
