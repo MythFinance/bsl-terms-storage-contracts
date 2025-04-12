@@ -1,4 +1,5 @@
 from algopy import (
+    Account,
     ARC4Contract,
     BoxMap,
     Bytes,
@@ -73,6 +74,9 @@ class Licenses(
     def modify_change_date(self, name: String, next_change_date: UInt64) -> None:
         self.admin_only()
 
+        box_key = self.get_use_grant_key(name)
+        ensure(box_key in self.licenses, S("ERR:NEXIST"))
+
         # change date can only be moved backwards
         prev_change_date = self.get_change_date(name)
         log(prev_change_date)
@@ -83,7 +87,15 @@ class Licenses(
     @abimethod()
     def modify_global(self, key: Bytes, value: Bytes) -> None:
         self.admin_only()
+        ensure(key[0:1] != b'"', S("ERR:INVLD"))
         op.AppGlobal.put(key, value)
+
+    @abimethod()
+    def modify_admin(self, new_admin: Account) -> None:
+        self.admin_only()
+        self.admin = new_admin
+
+    # --
 
     @subroutine
     def admin_only(self) -> None:
@@ -99,8 +111,8 @@ class Licenses(
 
     @subroutine
     def get_use_grant_key(self, name: String) -> String:
-        return name + " use grants"
+        return '"' + name + '" additional use grants'
 
     @subroutine
     def get_change_date_key(self, name: String) -> Bytes:
-        return (name + " change date").bytes
+        return ('"' + name + '" change date').bytes

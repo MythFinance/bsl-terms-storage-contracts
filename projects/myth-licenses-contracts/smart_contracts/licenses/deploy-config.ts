@@ -20,7 +20,7 @@ export async function deploy() {
   })
 
   const { appClient, result } = await factory.deploy({
-    // existingDeployments: { creator: deployer.addr, apps: {} }, // TO force redeploy
+    existingDeployments: { creator: deployer.addr, apps: {} }, // TO force redeploy
     onUpdate: 'append',
     onSchemaBreak: 'append',
   })
@@ -28,7 +28,7 @@ export async function deploy() {
   // If app was just created fund the app account
   if (['create', 'replace'].includes(result.operationPerformed)) {
     await algorand.send.payment({
-      amount: (1).algo(),
+      amount: (0.2028).algo(),
       sender: deployer.addr,
       receiver: appClient.appAddress,
     })
@@ -54,24 +54,17 @@ export async function deploy() {
 
   await appClient.send.addProduct({
     args: {
-      name: 'dualSTAKE Farm',
+      name: 'dualSTAKE Farms',
       changeDate: 1830297600,
     },
   })
 
   await appClient.send.modifyUseGrants({
     args: {
-      name: 'dualSTAKE Farm',
+      name: 'dualSTAKE Farms',
       offset: 0,
       payload: boxes[0],
       finalChunk: true,
     },
   })
-
-  // await appClient.send.modifyGlobal({
-  //   args: {
-  //     key: Buffer.from(' README 4'),
-  //     value: Buffer.from('Frontend viewer: https://bsl.myth.finance/'),
-  //   },
-  // })
 }

@@ -4,59 +4,59 @@
 // smart_contracts.licenses.contract.Licenses.__algopy_entrypoint_with_init() -> uint64:
 main:
     intcblock 1 0
-    bytecblock "admin" " use grants" " change date" ""
+    bytecblock 0x22 "admin" "\" additional use grants" "\" change date" "ERR:NEXIST"
     txn ApplicationID
     bnz main_after_if_else@2
-    // smart_contracts/licenses/contract.py:30
+    // smart_contracts/licenses/contract.py:31
     // self.admin = Txn.sender
-    bytec_0 // "admin"
+    bytec_1 // "admin"
     txn Sender
     app_global_put
-    // smart_contracts/licenses/contract.py:32-33
+    // smart_contracts/licenses/contract.py:33-34
     // b" README 1",
-    // b"Contract holding additional use grants and change dates for Myth Finance BSL licensed products.",
-    pushbytess 0x20524541444d452031 0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f72204d7974682046696e616e63652042534c206c6963656e7365642070726f64756374732e // 0x20524541444d452031, 0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f72204d7974682046696e616e63652042534c206c6963656e7365642070726f64756374732e
-    // smart_contracts/licenses/contract.py:31-34
+    // b"Contract holding additional use grants and change dates for BSL licensed products by Myth Finance.",
+    pushbytess 0x20524541444d452031 0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f722042534c206c6963656e7365642070726f6475637473206279204d7974682046696e616e63652e // 0x20524541444d452031, 0x436f6e747261637420686f6c64696e67206164646974696f6e616c20757365206772616e747320616e64206368616e676520646174657320666f722042534c206c6963656e7365642070726f6475637473206279204d7974682046696e616e63652e
+    // smart_contracts/licenses/contract.py:32-35
     // op.AppGlobal.put(
     //     b" README 1",
-    //     b"Contract holding additional use grants and change dates for Myth Finance BSL licensed products.",
+    //     b"Contract holding additional use grants and change dates for BSL licensed products by Myth Finance.",
     // )
     app_global_put
-    // smart_contracts/licenses/contract.py:36-37
+    // smart_contracts/licenses/contract.py:37-38
     // b" README 2",
-    // b"Storage keys are prefixed with the product name. Use grants in box storage.",
-    pushbytess 0x20524541444d452032 0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e747320696e20626f782073746f726167652e // 0x20524541444d452032, 0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e747320696e20626f782073746f726167652e
-    // smart_contracts/licenses/contract.py:35-38
+    // b"Storage keys are prefixed with the product name. Use grants are stored in box storage.",
+    pushbytess 0x20524541444d452032 0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e7473206172652073746f72656420696e20626f782073746f726167652e // 0x20524541444d452032, 0x53746f72616765206b657973206172652070726566697865642077697468207468652070726f64756374206e616d652e20557365206772616e7473206172652073746f72656420696e20626f782073746f726167652e
+    // smart_contracts/licenses/contract.py:36-39
     // op.AppGlobal.put(
     //     b" README 2",
-    //     b"Storage keys are prefixed with the product name. Use grants in box storage.",
+    //     b"Storage keys are prefixed with the product name. Use grants are stored in box storage.",
     // )
     app_global_put
-    // smart_contracts/licenses/contract.py:40-41
+    // smart_contracts/licenses/contract.py:41-42
     // b" README 3",
-    // b"Change dates in global storage as seconds since 1970-01-01. Frontend viewer: https://bsl.myth.finance/",
-    pushbytess 0x20524541444d452033 0x4368616e676520646174657320696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312e2046726f6e74656e64207669657765723a2068747470733a2f2f62736c2e6d7974682e66696e616e63652f // 0x20524541444d452033, 0x4368616e676520646174657320696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312e2046726f6e74656e64207669657765723a2068747470733a2f2f62736c2e6d7974682e66696e616e63652f
-    // smart_contracts/licenses/contract.py:39-42
+    // b"Change dates are stored in global storage as seconds since 1970-01-01 00:00:00 UTC.",
+    pushbytess 0x20524541444d452033 0x4368616e6765206461746573206172652073746f72656420696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312030303a30303a3030205554432e // 0x20524541444d452033, 0x4368616e6765206461746573206172652073746f72656420696e20676c6f62616c2073746f72616765206173207365636f6e64732073696e636520313937302d30312d30312030303a30303a3030205554432e
+    // smart_contracts/licenses/contract.py:40-43
     // op.AppGlobal.put(
     //     b" README 3",
-    //     b"Change dates in global storage as seconds since 1970-01-01. Frontend viewer: https://bsl.myth.finance/",
+    //     b"Change dates are stored in global storage as seconds since 1970-01-01 00:00:00 UTC.",
     // )
     app_global_put
 
 main_after_if_else@2:
-    // smart_contracts/licenses/contract.py:25-28
+    // smart_contracts/licenses/contract.py:26-29
     // class Licenses(
     //     ARC4Contract,
     //     state_totals=StateTotals(global_uints=54, global_bytes=10),
     // ):
     txn NumAppArgs
-    bz main_bare_routing@9
-    pushbytess 0x88bc9a7b 0x162e3e79 0x51dada2d 0x41151da8 // method "add_product(string,uint64)void", method "modify_use_grants(string,uint64,string,bool)void", method "modify_change_date(string,uint64)void", method "modify_global(byte[],byte[])void"
+    bz main_bare_routing@10
+    pushbytess 0x88bc9a7b 0x162e3e79 0x51dada2d 0x41151da8 0xbba3da8b // method "add_product(string,uint64)void", method "modify_use_grants(string,uint64,string,bool)void", method "modify_change_date(string,uint64)void", method "modify_global(byte[],byte[])void", method "modify_admin(account)void"
     txna ApplicationArgs 0
-    match main_add_product_route@5 main_modify_use_grants_route@6 main_modify_change_date_route@7 main_modify_global_route@8
+    match main_add_product_route@5 main_modify_use_grants_route@6 main_modify_change_date_route@7 main_modify_global_route@8 main_modify_admin_route@9
 
-main_after_if_else@11:
-    // smart_contracts/licenses/contract.py:25-28
+main_after_if_else@12:
+    // smart_contracts/licenses/contract.py:26-29
     // class Licenses(
     //     ARC4Contract,
     //     state_totals=StateTotals(global_uints=54, global_bytes=10),
@@ -64,15 +64,37 @@ main_after_if_else@11:
     intc_1 // 0
     return
 
-main_modify_global_route@8:
-    // smart_contracts/licenses/contract.py:83
+main_modify_admin_route@9:
+    // smart_contracts/licenses/contract.py:93
     // @abimethod()
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/licenses/contract.py:25-28
+    // smart_contracts/licenses/contract.py:26-29
+    // class Licenses(
+    //     ARC4Contract,
+    //     state_totals=StateTotals(global_uints=54, global_bytes=10),
+    // ):
+    txna ApplicationArgs 1
+    btoi
+    txnas Accounts
+    // smart_contracts/licenses/contract.py:93
+    // @abimethod()
+    callsub modify_admin
+    intc_0 // 1
+    return
+
+main_modify_global_route@8:
+    // smart_contracts/licenses/contract.py:87
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/licenses/contract.py:26-29
     // class Licenses(
     //     ARC4Contract,
     //     state_totals=StateTotals(global_uints=54, global_bytes=10),
@@ -81,21 +103,21 @@ main_modify_global_route@8:
     extract 2 0
     txna ApplicationArgs 2
     extract 2 0
-    // smart_contracts/licenses/contract.py:83
+    // smart_contracts/licenses/contract.py:87
     // @abimethod()
     callsub modify_global
     intc_0 // 1
     return
 
 main_modify_change_date_route@7:
-    // smart_contracts/licenses/contract.py:72
+    // smart_contracts/licenses/contract.py:73
     // @abimethod()
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/licenses/contract.py:25-28
+    // smart_contracts/licenses/contract.py:26-29
     // class Licenses(
     //     ARC4Contract,
     //     state_totals=StateTotals(global_uints=54, global_bytes=10),
@@ -104,21 +126,21 @@ main_modify_change_date_route@7:
     extract 2 0
     txna ApplicationArgs 2
     btoi
-    // smart_contracts/licenses/contract.py:72
+    // smart_contracts/licenses/contract.py:73
     // @abimethod()
     callsub modify_change_date
     intc_0 // 1
     return
 
 main_modify_use_grants_route@6:
-    // smart_contracts/licenses/contract.py:53
+    // smart_contracts/licenses/contract.py:54
     // @abimethod()
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/licenses/contract.py:25-28
+    // smart_contracts/licenses/contract.py:26-29
     // class Licenses(
     //     ARC4Contract,
     //     state_totals=StateTotals(global_uints=54, global_bytes=10),
@@ -132,21 +154,21 @@ main_modify_use_grants_route@6:
     txna ApplicationArgs 4
     intc_1 // 0
     getbit
-    // smart_contracts/licenses/contract.py:53
+    // smart_contracts/licenses/contract.py:54
     // @abimethod()
     callsub modify_use_grants
     intc_0 // 1
     return
 
 main_add_product_route@5:
-    // smart_contracts/licenses/contract.py:45
+    // smart_contracts/licenses/contract.py:46
     // @abimethod()
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/licenses/contract.py:25-28
+    // smart_contracts/licenses/contract.py:26-29
     // class Licenses(
     //     ARC4Contract,
     //     state_totals=StateTotals(global_uints=54, global_bytes=10),
@@ -155,20 +177,20 @@ main_add_product_route@5:
     extract 2 0
     txna ApplicationArgs 2
     btoi
-    // smart_contracts/licenses/contract.py:45
+    // smart_contracts/licenses/contract.py:46
     // @abimethod()
     callsub add_product
     intc_0 // 1
     return
 
-main_bare_routing@9:
-    // smart_contracts/licenses/contract.py:25-28
+main_bare_routing@10:
+    // smart_contracts/licenses/contract.py:26-29
     // class Licenses(
     //     ARC4Contract,
     //     state_totals=StateTotals(global_uints=54, global_bytes=10),
     // ):
     txn OnCompletion
-    bnz main_after_if_else@11
+    bnz main_after_if_else@12
     txn ApplicationID
     !
     assert // can only call when creating
@@ -178,91 +200,96 @@ main_bare_routing@9:
 
 // smart_contracts.licenses.contract.Licenses.add_product(name: bytes, change_date: uint64) -> void:
 add_product:
-    // smart_contracts/licenses/contract.py:45-46
+    // smart_contracts/licenses/contract.py:46-47
     // @abimethod()
     // def add_product(self, name: String, change_date: UInt64) -> None:
     proto 2 0
-    // smart_contracts/licenses/contract.py:47
+    // smart_contracts/licenses/contract.py:48
     // self.admin_only()
     callsub admin_only
-    // smart_contracts/licenses/contract.py:102
-    // return name + " use grants"
+    // smart_contracts/licenses/contract.py:114
+    // return '"' + name + '" additional use grants'
+    bytec_0 // "\""
     frame_dig -2
-    bytec_1 // " use grants"
     concat
     dup
-    // smart_contracts/licenses/contract.py:49
+    bytec_2 // "\" additional use grants"
+    concat
+    dup
+    // smart_contracts/licenses/contract.py:50
     // ensure(box_key not in self.licenses, S("ERR:EXIST"))
     box_len
     bury 1
-    // smart_contracts/licenses/contract.py:20
+    // smart_contracts/licenses/contract.py:21
     // if not cond:
     bz add_product_after_if_else@5
-    // smart_contracts/licenses/contract.py:49
+    // smart_contracts/licenses/contract.py:50
     // ensure(box_key not in self.licenses, S("ERR:EXIST"))
     pushbytes "ERR:EXIST"
-    // smart_contracts/licenses/contract.py:21
+    // smart_contracts/licenses/contract.py:22
     // log(msg)
     log
-    // smart_contracts/licenses/contract.py:22
+    // smart_contracts/licenses/contract.py:23
     // op.err()
     err
 
 add_product_after_if_else@5:
-    // smart_contracts/licenses/contract.py:106
-    // return (name + " change date").bytes
-    frame_dig -2
-    bytec_2 // " change date"
+    // smart_contracts/licenses/contract.py:118
+    // return ('"' + name + '" change date').bytes
+    frame_dig 0
+    bytec_3 // "\" change date"
     concat
-    // smart_contracts/licenses/contract.py:98
+    // smart_contracts/licenses/contract.py:110
     // op.AppGlobal.put(self.get_change_date_key(name), change_date)
     frame_dig -1
     app_global_put
-    // smart_contracts/licenses/contract.py:51
+    // smart_contracts/licenses/contract.py:52
     // self.licenses[self.get_use_grant_key(name)] = S("")
-    frame_dig 0
+    frame_dig 1
     dup
     box_del
     pop
-    bytec_3 // ""
+    pushbytes ""
     box_put
     retsub
 
 
 // smart_contracts.licenses.contract.Licenses.modify_use_grants(name: bytes, offset: uint64, payload: bytes, final_chunk: uint64) -> void:
 modify_use_grants:
-    // smart_contracts/licenses/contract.py:53-56
+    // smart_contracts/licenses/contract.py:54-57
     // @abimethod()
     // def modify_use_grants(
     //     self, name: String, offset: UInt64, payload: String, final_chunk: bool
     // ) -> None:
     proto 4 0
-    bytec_3 // ""
-    // smart_contracts/licenses/contract.py:102
-    // return name + " use grants"
+    pushbytes ""
+    // smart_contracts/licenses/contract.py:114
+    // return '"' + name + '" additional use grants'
+    bytec_0 // "\""
     frame_dig -4
-    bytec_1 // " use grants"
+    concat
+    bytec_2 // "\" additional use grants"
     concat
     dup
-    // smart_contracts/licenses/contract.py:59
+    // smart_contracts/licenses/contract.py:60
     // ensure(box_key in self.licenses, S("ERR:NEXIST"))
     box_len
     bury 1
-    // smart_contracts/licenses/contract.py:20
+    // smart_contracts/licenses/contract.py:21
     // if not cond:
     bnz modify_use_grants_after_if_else@10
-    // smart_contracts/licenses/contract.py:59
+    // smart_contracts/licenses/contract.py:60
     // ensure(box_key in self.licenses, S("ERR:NEXIST"))
-    pushbytes "ERR:NEXIST"
-    // smart_contracts/licenses/contract.py:21
+    bytec 4 // "ERR:NEXIST"
+    // smart_contracts/licenses/contract.py:22
     // log(msg)
     log
-    // smart_contracts/licenses/contract.py:22
+    // smart_contracts/licenses/contract.py:23
     // op.err()
     err
 
 modify_use_grants_after_if_else@10:
-    // smart_contracts/licenses/contract.py:60-61
+    // smart_contracts/licenses/contract.py:61-62
     // # grow box if needed
     // if offset + payload.bytes.length > self.licenses.length(box_key):
     frame_dig -2
@@ -276,37 +303,37 @@ modify_use_grants_after_if_else@10:
     assert // check self.licenses entry exists
     >
     bz modify_use_grants_after_if_else@2
-    // smart_contracts/licenses/contract.py:62
+    // smart_contracts/licenses/contract.py:63
     // op.Box.resize(box_key.bytes, offset + payload.bytes.length)
     frame_dig 1
     frame_dig 0
     box_resize
 
 modify_use_grants_after_if_else@2:
-    // smart_contracts/licenses/contract.py:64
+    // smart_contracts/licenses/contract.py:65
     // op.Box.splice(box_key.bytes, offset, UInt64(0), payload.bytes)
     frame_dig 1
     frame_dig -3
     intc_1 // 0
     frame_dig -2
     box_splice
-    // smart_contracts/licenses/contract.py:67-68
+    // smart_contracts/licenses/contract.py:68-69
     // final_chunk
     // and self.licenses.length(box_key) > offset + payload.bytes.length
     frame_dig -1
     bz modify_use_grants_after_if_else@5
-    // smart_contracts/licenses/contract.py:68
+    // smart_contracts/licenses/contract.py:69
     // and self.licenses.length(box_key) > offset + payload.bytes.length
     frame_dig 1
     box_len
     assert // check self.licenses entry exists
     frame_dig 0
     >
-    // smart_contracts/licenses/contract.py:67-68
+    // smart_contracts/licenses/contract.py:68-69
     // final_chunk
     // and self.licenses.length(box_key) > offset + payload.bytes.length
     bz modify_use_grants_after_if_else@5
-    // smart_contracts/licenses/contract.py:70
+    // smart_contracts/licenses/contract.py:71
     // op.Box.resize(box_key.bytes, offset + payload.bytes.length)
     frame_dig 1
     frame_dig 0
@@ -318,46 +345,74 @@ modify_use_grants_after_if_else@5:
 
 // smart_contracts.licenses.contract.Licenses.modify_change_date(name: bytes, next_change_date: uint64) -> void:
 modify_change_date:
-    // smart_contracts/licenses/contract.py:72-73
+    // smart_contracts/licenses/contract.py:73-74
     // @abimethod()
     // def modify_change_date(self, name: String, next_change_date: UInt64) -> None:
     proto 2 0
-    // smart_contracts/licenses/contract.py:74
+    intc_1 // 0
+    // smart_contracts/licenses/contract.py:75
     // self.admin_only()
     callsub admin_only
-    // smart_contracts/licenses/contract.py:106
-    // return (name + " change date").bytes
+    // smart_contracts/licenses/contract.py:114
+    // return '"' + name + '" additional use grants'
+    bytec_0 // "\""
     frame_dig -2
-    bytec_2 // " change date"
     concat
     dup
-    // smart_contracts/licenses/contract.py:94
-    // return op.AppGlobal.get_uint64(self.get_change_date_key(name))
-    app_global_get
+    bytec_2 // "\" additional use grants"
+    concat
     // smart_contracts/licenses/contract.py:78
-    // log(prev_change_date)
-    dup
-    itob
-    log
-    // smart_contracts/licenses/contract.py:79
-    // ensure(prev_change_date > next_change_date, S("ERR:LATER"))
-    frame_dig -1
-    >
-    // smart_contracts/licenses/contract.py:20
+    // ensure(box_key in self.licenses, S("ERR:NEXIST"))
+    box_len
+    bury 1
+    // smart_contracts/licenses/contract.py:21
     // if not cond:
     bnz modify_change_date_after_if_else@5
-    // smart_contracts/licenses/contract.py:79
-    // ensure(prev_change_date > next_change_date, S("ERR:LATER"))
-    pushbytes "ERR:LATER"
-    // smart_contracts/licenses/contract.py:21
+    // smart_contracts/licenses/contract.py:78
+    // ensure(box_key in self.licenses, S("ERR:NEXIST"))
+    bytec 4 // "ERR:NEXIST"
+    // smart_contracts/licenses/contract.py:22
     // log(msg)
     log
-    // smart_contracts/licenses/contract.py:22
+    // smart_contracts/licenses/contract.py:23
     // op.err()
     err
 
 modify_change_date_after_if_else@5:
-    // smart_contracts/licenses/contract.py:98
+    // smart_contracts/licenses/contract.py:118
+    // return ('"' + name + '" change date').bytes
+    frame_dig 1
+    bytec_3 // "\" change date"
+    concat
+    dup
+    frame_bury 0
+    // smart_contracts/licenses/contract.py:106
+    // return op.AppGlobal.get_uint64(self.get_change_date_key(name))
+    app_global_get
+    // smart_contracts/licenses/contract.py:82
+    // log(prev_change_date)
+    dup
+    itob
+    log
+    // smart_contracts/licenses/contract.py:83
+    // ensure(prev_change_date > next_change_date, S("ERR:LATER"))
+    frame_dig -1
+    >
+    // smart_contracts/licenses/contract.py:21
+    // if not cond:
+    bnz modify_change_date_after_if_else@11
+    // smart_contracts/licenses/contract.py:83
+    // ensure(prev_change_date > next_change_date, S("ERR:LATER"))
+    pushbytes "ERR:LATER"
+    // smart_contracts/licenses/contract.py:22
+    // log(msg)
+    log
+    // smart_contracts/licenses/contract.py:23
+    // op.err()
+    err
+
+modify_change_date_after_if_else@11:
+    // smart_contracts/licenses/contract.py:110
     // op.AppGlobal.put(self.get_change_date_key(name), change_date)
     frame_dig 0
     frame_dig -1
@@ -367,14 +422,51 @@ modify_change_date_after_if_else@5:
 
 // smart_contracts.licenses.contract.Licenses.modify_global(key: bytes, value: bytes) -> void:
 modify_global:
-    // smart_contracts/licenses/contract.py:83-84
+    // smart_contracts/licenses/contract.py:87-88
     // @abimethod()
     // def modify_global(self, key: Bytes, value: Bytes) -> None:
     proto 2 0
-    // smart_contracts/licenses/contract.py:85
+    // smart_contracts/licenses/contract.py:89
     // self.admin_only()
     callsub admin_only
-    // smart_contracts/licenses/contract.py:86
+    // smart_contracts/licenses/contract.py:90
+    // ensure(key[0:1] != b'"', S("ERR:INVLD"))
+    frame_dig -2
+    len
+    intc_1 // 0
+    dig 1
+    >=
+    intc_1 // 0
+    dig 2
+    uncover 2
+    select
+    intc_0 // 1
+    dig 2
+    >=
+    intc_0 // 1
+    uncover 3
+    uncover 2
+    select
+    frame_dig -2
+    cover 2
+    substring3
+    bytec_0 // 0x22
+    !=
+    // smart_contracts/licenses/contract.py:21
+    // if not cond:
+    bnz modify_global_after_if_else@3
+    // smart_contracts/licenses/contract.py:90
+    // ensure(key[0:1] != b'"', S("ERR:INVLD"))
+    pushbytes "ERR:INVLD"
+    // smart_contracts/licenses/contract.py:22
+    // log(msg)
+    log
+    // smart_contracts/licenses/contract.py:23
+    // op.err()
+    err
+
+modify_global_after_if_else@3:
+    // smart_contracts/licenses/contract.py:91
     // op.AppGlobal.put(key, value)
     frame_dig -2
     frame_dig -1
@@ -382,26 +474,43 @@ modify_global:
     retsub
 
 
+// smart_contracts.licenses.contract.Licenses.modify_admin(new_admin: bytes) -> void:
+modify_admin:
+    // smart_contracts/licenses/contract.py:93-94
+    // @abimethod()
+    // def modify_admin(self, new_admin: Account) -> None:
+    proto 1 0
+    // smart_contracts/licenses/contract.py:95
+    // self.admin_only()
+    callsub admin_only
+    // smart_contracts/licenses/contract.py:96
+    // self.admin = new_admin
+    bytec_1 // "admin"
+    frame_dig -1
+    app_global_put
+    retsub
+
+
 // smart_contracts.licenses.contract.Licenses.admin_only() -> void:
 admin_only:
-    // smart_contracts/licenses/contract.py:90
+    // smart_contracts/licenses/contract.py:102
     // ensure(Txn.sender == self.admin, S("ERR:UNAUTH"))
     txn Sender
     intc_1 // 0
-    bytec_0 // "admin"
+    bytec_1 // "admin"
     app_global_get_ex
     assert // check self.admin exists
     ==
-    // smart_contracts/licenses/contract.py:20
+    // smart_contracts/licenses/contract.py:21
     // if not cond:
     bnz admin_only_after_if_else@3
-    // smart_contracts/licenses/contract.py:90
+    // smart_contracts/licenses/contract.py:102
     // ensure(Txn.sender == self.admin, S("ERR:UNAUTH"))
     pushbytes "ERR:UNAUTH"
-    // smart_contracts/licenses/contract.py:21
+    // smart_contracts/licenses/contract.py:22
     // log(msg)
     log
-    // smart_contracts/licenses/contract.py:22
+    // smart_contracts/licenses/contract.py:23
     // op.err()
     err
 
